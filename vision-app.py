@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from PIL import Image
 load_dotenv()
 
-gemini.configure(api_key = os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key = os.getenv("GEMINI_API_KEY"))
 vision_model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 prompt = """
 You are an expert ICT trader. Based on the lower timeframe chart, give me a clear trade suggestion using Smart Money Concepts (SMC) tailored for sniper entries. Do NOT say 'no trade' or 'wait for more confirmation.' You MUST give a trade setup — even if it's high risk — and explain the reasoning. Your output must include:
